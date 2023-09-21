@@ -82,17 +82,16 @@ function AddPauseUser() {
       toast.error("Please date and meal are required");
       return;
     }
-  
+
     // Get current date and time
     const currentDate = new Date();
     const currentHour = currentDate.getHours();
 
-  
     // Check if the pause date is tomorrow
     const pauseDate = new Date(pause.date);
     const isTomorrow = pauseDate.getDate() === currentDate.getDate() + 1;
     const isToday = pauseDate.getDate() === currentDate.getDate();
-  
+
     // Check if the pause date is after tomorrow's breakfast
     const tomorrowBreakfastLimit = new Date(currentDate);
     tomorrowBreakfastLimit.setDate(currentDate.getDate() + 2);
@@ -106,32 +105,37 @@ function AddPauseUser() {
         return;
       }
     }
-    
+
     if (isTomorrow) {
       if (pause.meal === "breakfast" || pause.meal === "lunch") {
         // Check if the pause is for breakfast or lunch
         if (currentHour >= 22) {
-          toast.error("You cannot pause breakfast or lunch on tomorrow after today 10 PM.");
+          toast.error(
+            "You cannot pause breakfast or lunch on tomorrow after today 10 PM."
+          );
           return;
         }
       }
     } else if (pauseDate.getDate() < currentDate.getDate() + 1) {
-      toast.error("You cannot pause meals for past days or today's breakfast and lunch.");
+      toast.error(
+        "You cannot pause meals for past days or today's breakfast and lunch."
+      );
       return;
     } else {
       // Check if pauseDate is between startDate and endDate (inclusive)
       const startDate = new Date(user.startDate);
       const endDate = new Date(user.endDate);
-    
+
       if (pauseDate >= startDate && pauseDate <= endDate) {
         // Allow pausing any meal on or between startDate and endDate
       } else {
-        toast.error("Please select a pause date on or between your user's start and end date.");
+        toast.error(
+          "Please select a pause date on or between your user's start and end date."
+        );
         return;
       }
     }
-    
-  
+
     // If none of the error conditions are met, proceed with the pause action
     axios
       .post(
@@ -153,7 +157,7 @@ function AddPauseUser() {
         toast.error("Failed to add change");
       });
   }
-  
+
   return (
     <>
       <div className="dashboard-user">
