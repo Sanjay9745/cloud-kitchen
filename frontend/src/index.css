@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --primary-color:#017D3E; /* Define your primary color variable */
+    --secondary-color: #00EE76; /* Define your secondary color variable */
+    --text-color: #333; /* Define a text color variable */
+    --white-color: #fff; /* Define a white color variable */
+  }
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+/* Track */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #919191; /* Color of the scrollbar handle */
+  border-radius: 5px; /* Rounded corners for the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4e494998; /* Color of the scrollbar handle on hover */
+}
+
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+  background: #f0f0f0; /* Color of the scrollbar track on hover */
+}
+
+/* Track on mouse-down */
+::-webkit-scrollbar-thumb:active {
+  background: #5a5656cd; /* Color of the scrollbar handle when clicked */
+}

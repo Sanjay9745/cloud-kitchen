@@ -1,0 +1,60 @@
+.import-container {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .import-container .title {
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+  }
+  .custom-file-upload {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #e8e8e8;
+    background: linear-gradient(90deg, var(--primary-color) 0%,var(--secondary-color) 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+  }
+  
+  .custom-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-file-upload .icon svg {
+    height: 80px;
+    fill: #e8e8e8;
+  }
+  
+  .custom-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-file-upload .text span {
+    font-weight: 400;
+    color: #e8e8e8;
+  }
+  
+  .custom-file-upload input {
+    display: none;
+  }

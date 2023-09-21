@@ -1,0 +1,86 @@
+
+  const [meals, setMeals] = useState({
+    breakfast: { selected: false, routes: [""], type: "veg" },
+    lunch: { selected: false, routes: [""], type: "veg" },
+    dinner: { selected: false, routes: [""], type: "veg" },
+  });
+
+//if multiple route
+   // Function to add a route for a specific meal
+  // const addRoute = (meal) => {
+  //   setMeals({
+  //     ...meals,
+  //     [meal]: {
+  //       ...meals[meal],
+  //       routes: [...meals[meal].routes, ""],
+  //     },
+  //   });
+  // };
+
+  // // Function to remove a route for a specific meal
+  // const removeRoute = (meal, index) => {
+  //   const updatedRoutes = [...meals[meal].routes];
+  //   updatedRoutes.splice(index, 1);
+  //   setMeals({
+  //     ...meals,
+  //     [meal]: {
+  //       ...meals[meal],
+  //       routes: updatedRoutes,
+  //     },
+  //   });
+  // };
+
+  // Function to handle route input change
+  // const handleRouteChange = (meal, value, index) => {
+  //   const updatedRoutes = [...meals[meal].routes];
+  //   updatedRoutes[index] = value;
+  //   setMeals({
+  //     ...meals,
+  //     [meal]: {
+  //       ...meals[meal],
+  //       routes: updatedRoutes,
+  //     },
+  //   });
+  // };
+
+         
+         
+          {/* <div className="user-details">
+                            {meals[meal].routes.map((route, index) => (
+                              <div className="input-box" key={index}>
+                                <span className="details">
+                                  Route {index + 1}
+                                </span>
+                                <input
+                                  type="text"
+                                  placeholder="Enter your Route"
+                                  required
+                                  value={route}
+                                  onChange={(e) =>
+                                    handleRouteChange(
+                                      meal,
+                                      e.target.value,
+                                      index
+                                    )
+                                  }
+                                />
+                                <button
+                                  type="button"
+                                  className="btn btn-small"
+                                  onClick={() => removeRoute(meal, index)}
+                                  disabled={meals[meal].routes.length === 1}
+                                >
+                                  Remove
+                                </button>
+                              </div>
+                            ))}
+                            <div>
+                              <button
+                                type="button"
+                                className="btn btn-small"
+                                onClick={() => addRoute(meal)}
+                              >
+                                Add Route
+                              </button>
+                            </div>
+                          </div> */}

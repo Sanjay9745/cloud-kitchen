@@ -1,0 +1,100 @@
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    max-width: 190px;
+    position: relative;
+  }
+  
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 80%;
+    font-family: "Poppins", sans-serif;
+  }
+
+  
+  .inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #e8e8e8;
+  }
+  
+  .inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(150, 150, 200);
+  }
+  .drop-down{
+      outline: none;
+      padding: 13px;
+      border: none;
+      box-shadow: 1px 1px 4px grey;
+      border-radius: 10px;
+      font-family:"Poppins", sans-serif;
+      font-size:1rem;
+  }
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.package-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.package-table th,
+.package-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.package-table thead th {
+    background-color: #333;
+    color: #fff;
+}
+
+.package-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 768px) {
+    .package-table {
+        overflow-x: auto;
+    }
+    
+    .package-table th,
+    .package-table td {
+        white-space: nowrap;
+    }
+
+    .package-table thead {
+        display: none;
+    }
+
+    .package-table tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .package-table tbody tr:last-child {
+        margin-bottom: 0;
+    }
+
+    .package-table tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

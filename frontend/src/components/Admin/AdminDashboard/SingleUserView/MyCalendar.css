@@ -1,0 +1,128 @@
+/* Customize calendar appearance */
+.my-calendar {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Style the calendar header */
+.react-calendar__navigation {
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.react-calendar__navigation .react-calendar__navigation__label {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.react-calendar__navigation button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 5px;
+  outline: none;
+  transition: background-color 0.3s ease;
+  
+}
+
+.react-calendar__navigation button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Style the calendar view */
+.react-calendar__month-view__weekdays {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  flex: 1;
+  text-align: center;
+}
+
+.react-calendar__month-view__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #ccc;
+}
+
+/* Style event markers */
+.event-markers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.event-marker {
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin: 2px 0;
+  font-size: 14px;
+}
+
+/* Style selected date */
+.react-calendar__tile--active {
+  background-color: transparent; /* Remove circle */
+  color: #007bff;
+  font-weight: bold;
+  border: 1px solid #007bff; /* Add border */
+  border-radius: 4px;
+}
+
+/* Style today's date */
+.react-calendar__tile--now {
+  background-color: #f2f2f2;
+}
+
+/* Style event tooltip */
+.react-calendar__tile--hasActive {
+  position: relative;
+  cursor: pointer;
+}
+
+.event-tooltip {
+  position: absolute;
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
+}
+.react-calendar__month-view__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+  background: white;
+}
+
+.react-calendar__month-view__days button{
+  border: .5px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  background: white; /* Set the background to white */
+  border-radius: 5px;
+}
