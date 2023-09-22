@@ -657,10 +657,10 @@ const DeletePause = async (req, res) => {
     }
 
     // Delete the pause document
-    await pause.remove();
+    await Pause.deleteOne({ _id: id });
 
     // Delete the extra meal document
-    await extra.remove();
+    await Extra.deleteOne({ _id: pause.extraId });
 
     res.status(200).json({ message: "Deleted Successfully" });
   } catch (error) {
@@ -668,6 +668,7 @@ const DeletePause = async (req, res) => {
     res.status(500).json({ message: "Error while deleting pause" });
   }
 };
+
 
 const GetChangeList = async (req, res) => {
   try {
